@@ -55,6 +55,7 @@ def snmpGet(target,oids):
 
 def main():
     print('=== SNMP Monitor ===')
+    print('COMMUNITY: '+COMMUNITY+"\n")
     targets = getTargets()
     itemNames,itemOIDs = getItems()
     while(True):
