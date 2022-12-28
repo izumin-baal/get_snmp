@@ -55,6 +55,7 @@ def snmpGet(target,oids):
 
 def main():
     print('=== SNMP Monitor ===')
+    print('Ctrl+C to exit\n')
     print('COMMUNITY: '+COMMUNITY+"\n")
     targets = getTargets()
     itemNames,itemOIDs = getItems()
@@ -68,4 +69,8 @@ def main():
         print('\n')
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except KeyboardInterrupt:
+        print("\n")
+        print("=== Close ===")
